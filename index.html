@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Downloadable Resume builder</title>
+</head>
+<body>
+    
+    <h1> Downloadable Resume builder by  <br>Waseem Ahmed</h1>
+    
+    <form id="resumeform" >
+        <fieldset>
+            <legend> Personal information</legend>
+
+
+            <label for="name" > Name :</label>
+            <input type="text" id="name" required placeholder= "Enter your Name">
+            <br>
+
+            <label for="fathername"> Fathername :</label>
+            <input type="text" id="fathername" required placeholder= "Enter Your Father Name">
+            <br>
+
+            <label for="emial" > Email :</label>
+            <input type="text" id="emial" required placeholder= "Enter Your Email ">
+            <br>
+
+            <label for="phone"> Phone no :</label>
+            <input type="number"  id="phone" required placeholder= "Enter Your Phone no" >
+            
+
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" id="profilePicture" name ="profilePicture"  required>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education</label>
+            <textarea name="education" id="education" rows="4" required placeholder= "Enter Your Education Detail" ></textarea>
+
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience</label>
+            <textarea name="experience" id="experience" rows="4" required placeholder= "Enter Your Work Experience"></textarea>
+        </fieldset>
+        <br>
+
+
+        <fieldset>
+
+            <legend>Skill</legend>
+            <label for="skill">Skills</label>
+            <textarea name="skill" id="skill" rows="4" required placeholder= "Enter Your Skill"></textarea>
+
+        </fieldset>  
+        <br>  
+        
+        <button type="submit" id="generate-btn"> Generate Resume</button>
+        <br>
+
+        <button type="reset" id="reset-btn"> Reset Resume</button>
+    
+    </form>
+    <br>
+
+    <div id= "resumeoutput">
+       <!-- Resume will be generated here -->
+
+    </div><br>
+   
+    
+
+    <script src="index.js"></script>
+    
+    
+
+    
+</body>
+</html >
