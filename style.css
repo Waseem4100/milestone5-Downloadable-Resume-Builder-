@@ -2,18 +2,18 @@ body{
     font-family:  sans-serif, Arial, Helvetica, ;
     margin: 30px;
     padding: 0;
-    background: linear-gradient(to right, hsl(197, 71%, 73%),hsl(120, 73%, 75%));
+    background:  linear-gradient(to right, hsl(197, 96%, 45%),hsl(120, 73%, 75%));
     
 }
 body:hover{
-    background: linear-gradient(to left, hsl(197, 71%, 73%),hsl(120, 73%, 75%));
+    background: linear-gradient(to left, hsl(197, 96%, 55%),hsl(120, 73%, 75%));
 
 }
 .profilePicture{
     display: block;
     margin: 0 auto;
-    border:2px solid skyblue; 
-    box-shadow:0 4px 5px rgb(11, 230, 36);
+    border:2px solid hsl(197, 96%, 45%); 
+    box-shadow :2px 2px 5px  rgb(23, 158, 179) ;
     border-radius: 500%;
     width: 150px;
     height: 150px;
@@ -35,9 +35,10 @@ h1:hover{
 
 form{
     max-width: 600px;
+    padding: 20px;
     margin: auto;  
     border-radius: 8px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgb(23, 158, 179)
     
 }
 
@@ -46,7 +47,7 @@ fieldset{
     border-radius: 6px;
     margin-bottom:20px ;
     padding: 20px;
-    background-color:  hsl(197, 71%, 73%);   
+    background-color: rgb(71, 199, 218);   
 }
 legend{
     font-weight: bold;
@@ -58,7 +59,7 @@ label{
     margin-top: 10px;
     color: hsl(0, 0%, 0%);
 }
-input,textarea{
+input{
     width: calc(100% - 10px);
     font-size: 3fr;
     font-family: sans-serif;
@@ -81,17 +82,17 @@ button{
 
 }
 #generate-btn{
-    background: linear-gradient(to right, hsl(197, 71%, 73%),hsl(120, 73%, 75%))
+    background: linear-gradient(to right, hsl(197, 96%, 45%),hsl(120, 73%, 75%));
 
 
 }
 #generate-btn:hover{
-    background: linear-gradient(to left, hsl(197, 71%, 63%),hsl(120, 73%, 65%))
+    background: linear-gradient(to left, hsl(197, 71%, 35%),hsl(120, 73%, 65%))
 
 
 }
 #generate-btn:active {
-    background: linear-gradient(to right, hsl(197, 71%, 53%),hsl(120, 73%, 55%))
+    background: linear-gradient(to right, hsl(197, 71%, 25%),hsl(120, 73%, 55%))
 
 
 }
@@ -109,11 +110,12 @@ button{
 
 #resumeoutput{
     
+    max-height: 800px;
     max-width: 600px;
+    padding: 20px;
     margin: auto;  
-    border: 2px solid black ;
     border-radius: 8px;
-    box-shadow: 0px 0px 9px rgba(215, 0, 0, 0.1); 
+    box-shadow: 2px 2px 5px rgb(23, 158, 179)
     
 } 
 
@@ -121,5 +123,6 @@ button{
     color: black;
     margin-left:50% ;
     margin-right: 50% ;
+    
     
 }

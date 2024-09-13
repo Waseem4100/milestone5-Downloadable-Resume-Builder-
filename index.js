@@ -5,23 +5,46 @@ var _a;
     var _a;
     event.preventDefault();
     //type assertions
+    // ******************* PERSONAL INFORMATION  ********************       
     const profilePictureinput = document.getElementById(`profilePicture`);
     const nameElement = document.getElementById(`name`);
     const fathernameElement = document.getElementById(`fathername`);
     const emailElement = document.getElementById(`emial`);
     const phoneElement = document.getElementById(`phone`);
-    const educationElement = document.getElementById(`education`);
-    const experienceElement = document.getElementById(`experience`);
-    const skillElement = document.getElementById(`skill`);
-    if (nameElement && fathernameElement && emailElement && phoneElement && profilePictureinput && educationElement && experienceElement && skillElement) {
-        //*********************************************************************** */      
+    // ******************* EDUCTION  ********************
+    const education1Element = document.getElementById(`education1`);
+    const education2Element = document.getElementById(`education2`);
+    const education3Element = document.getElementById(`education3`);
+    // ******************* EXPERIENCE  ********************
+    const experience1Element = document.getElementById(`experience1`);
+    const experience2Element = document.getElementById(`experience2`);
+    const experience3Element = document.getElementById(`experience3`);
+    // ******************* SKILL  ********************
+    const skill1Element = document.getElementById(`skill1`);
+    const skill2Element = document.getElementById(`skill2`);
+    const skill3Element = document.getElementById(`skill3`);
+    if (nameElement && fathernameElement && emailElement && phoneElement && profilePictureinput &&
+        education1Element && education2Element && education3Element &&
+        experience1Element && experience2Element && experience3Element &&
+        skill1Element && skill2Element && skill3Element) {
+        //*********************************************************************** */  
+        // ******************* PERSONAL INFORMATION  ********************      
         const Name = nameElement.value;
         const fathername = fathernameElement.value;
         const email = emailElement.value;
         const phone = phoneElement.value;
-        const education = educationElement.value;
-        const experience = experienceElement.value;
-        const skill = skillElement.value;
+        // ******************* EDUCTION  ********************
+        const education1 = education1Element.value;
+        const education2 = education2Element.value;
+        const education3 = education3Element.value;
+        // ******************* EXPERIENCE  ********************
+        const experience1 = experience1Element.value;
+        const experience2 = experience2Element.value;
+        const experience3 = experience3Element.value;
+        // ******************* SKILLS  ********************
+        const skill1 = skill1Element.value;
+        const skill2 = skill2Element.value;
+        const skill3 = skill3Element.value;
         const profilePictureFile = (_a = profilePictureinput.files) === null || _a === void 0 ? void 0 : _a[0];
         const profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : '';
         //** *********************************************************************************/
@@ -29,26 +52,78 @@ var _a;
         //    const uniquepath = `resume/${username.replace(/\s+/g,'_')}_cv.html`
         //create resume
         const resumeoutput = `
-       <div id = "resume" style="text-align: left; margin: 20px ";
-    " >
 
-       <h2>Resume</h2>
-       ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}
-       <p><strong> Name: </strong> <span id ="edit-name" class="editable"> ${Name}</span></p>
-       <p><strong>  Father Name: </strong><span id ="edit-fathername" class="editable">  ${fathername}</span></p>
-       <p><strong> Email : </strong><span id ="edit-email" class="editable">  ${email}</span></p>
-       <p><strong> phone no: </strong><span id ="edit-phone" class="editable">  ${phone}</span></p>
+    <H1 style="text-align: left;"> STATIC RESUME BY  <br>
+        WASEEM AHMED</H1>
+    <div  id ="Resume">
+
+
+       <div id = "profilePicture"> ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}</div> 
+
+
+        <div id="personal information">
+            <h2>PERSONAL INFORMATION</h2>
+          
+            <ul style=" font-weight: bold;"> 
+            <li> Name : ${Name}</li>
+            
+            
+            <li>FatherName : ${fathername} </li>
+            
+            
+            <li> Email : ${email}</li>
+            
+
+            <li> Phone no : ${phone}</li>
+        </ul>
+        </div>
+        <br>
+
+        <div id="education">
+            <h2>EDUCATION</h2>
+            <ul style=" font-weight: bold;">
+
+            <li>${education1} </li> 
+            <li>${education2} </li> 
+            <li>${education3} </li> 
+            
+           
+
+
+              </ul>
+        </div>
+
+        <div id="experience">
+            <h2>EXPERIENCE</h2>
+            <ul style=" font-weight: bold;">
+                <li>${experience1}</li>
+                <li>${experience2}</li>
+                <li>${experience3}</li>
+            </ul>
+
+             
+        </div>
+
+
+     
+       <div id="skills">
+    <h2>SKILLS:</h2>
+    
+    <ul style=" font-weight: bold;">
+    <li>${skill1} </li> 
+    <li>${skill2} </li> 
+    <li>${skill3} </li> 
+
+      
+    </ul>
+</div>
+
+
+ </div>
    
-           <h3>Education </h3>
-   
-       <p id ="edit-education" class="editable"> ${education}</p>
-       
-           <h3>Experience </h3>
-       <p id ="edit-experience" class="editable"> ${experience}</p>
-   
-           <h3 >Skill </h3>
-       <p id ="edit-skill" class="editable"> ${skill}</p>
-       
+
+
+
 
        </div>
     `;
