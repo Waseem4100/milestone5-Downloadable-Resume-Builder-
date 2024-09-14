@@ -83,6 +83,7 @@ button{
 }
 #generate-btn{
     background: linear-gradient(to right, hsl(197, 96%, 45%),hsl(120, 73%, 75%));
+    cursor: pointer;
 
 
 }
@@ -98,7 +99,8 @@ button{
 }
 
 #reset-btn{
-    background: linear-gradient(to right, hsl(9, 88%, 49%),hsl(25, 89%, 48%))
+    background: linear-gradient(to right, hsl(9, 88%, 49%),hsl(25, 89%, 48%));
+    cursor : pointer
 }
 #reset-btn:hover{
 
@@ -125,3 +127,74 @@ button{
     
     
 }
+
+.hidebutton{
+    width: calc(100% - 10px);
+    height: 35px;
+    font-size: 3fr;
+    font-family: sans-serif;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, hsl(197, 96%, 45%),hsl(120, 73%, 75%));
+    cursor: pointer;
+
+}
+.hidebutton:hover{
+    background: linear-gradient(to left, hsl(197, 71%, 35%),hsl(120, 73%, 65%))
+
+}
+.hidebutton:active{
+    background: linear-gradient(to right, hsl(197, 71%, 25%),hsl(120, 73%, 55%))
+
+}
+
+#downloadpdfbutton{
+    background: linear-gradient(to right, hsl(197, 71%, 45%),hsl(120, 73%, 75%));
+    cursor: pointer;
+
+
+}
+#downloadpdfbutton:hover{
+    background: linear-gradient(to right, hsl(197, 71%, 35%),hsl(120, 73%, 65%));
+
+
+}
+#downloadpdfbutton:active{
+    background: linear-gradient(to right, hsl(197, 71%, 25%),hsl(120, 73%, 55%));
+
+
+}
+
+#sharelinkbutton{
+    background: linear-gradient(to right, hsl(197, 71%, 45%),hsl(120, 73%, 75%));
+    cursor: pointer;
+
+
+}
+#sharelinkbutton:hover{
+    background: linear-gradient(to right, hsl(197, 71%, 35%),hsl(120, 73%, 65%))
+
+
+}
+#sharelinkbutton:active{
+    background: linear-gradient(to right, hsl(197, 71%, 25%),hsl(120, 73%, 55%))
+
+
+}
+
+h2{
+  
+   
+    font-size: 10fr;
+    font-weight: bolder;
+    
+}
+
+h2:hover{
+    text-shadow: 2px 0px 0px rgb(23, 158, 179), 0px 2px 2px rgb(122, 215, 230);
+}
+
+

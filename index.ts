@@ -101,12 +101,11 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
        //create resume
        const resumeoutput = `
 
-    <H1 style="text-align: left;"> STATIC RESUME BY  <br>
-        WASEEM AHMED</H1>
+    <H2 style="text-align:left;margin :0; display :inline;"> STATIC RESUME BY WASEEM AHMED</H2>
     <div  id ="Resume">
 
 
-       <div id = "profilePicture"> ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}</div> 
+       <div id = "profilePicture > ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}</div> 
 
 
         <div id="personal information">
@@ -128,12 +127,15 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
         <br>
 
         <div id="education">
+       
             <h2>EDUCATION</h2>
             <ul style=" font-weight: bold;">
 
             <li>${education1} </li> 
             <li>${education2} </li> 
             <li>${education3} </li> 
+         
+         </div>   
             
            
 
@@ -154,6 +156,7 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
 
 
      
+   
        <div id="skills">
     <h2>SKILLS:</h2>
     
@@ -161,10 +164,11 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
     <li>${skill1} </li> 
     <li>${skill2} </li> 
     <li>${skill3} </li> 
-
+   
       
     </ul>
 </div>
+
 
 
  </div>
@@ -197,6 +201,7 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
 
     //download pdf button
     const downloadpdfbutton = document.createElement(`button`)
+    downloadpdfbutton.id ='downloadpdfbutton';
     downloadpdfbutton.textContent = "Download PDF"
     downloadpdfbutton.classList.add('downloadpdfbutton')
     downloadpdfbutton.addEventListener('click', () => {
@@ -206,6 +211,7 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
 
     //add shareable link button
     const sharelinkbutton = document.createElement(`button`)
+    sharelinkbutton.id ='sharelinkbutton';
     sharelinkbutton.textContent = " copy Shareable Link"
     sharelinkbutton.classList.add('sharelinkbutton')
     sharelinkbutton.addEventListener('click',  () => {
@@ -226,3 +232,38 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
 
    });
 
+// hide buttons
+
+  function educationbutton() {
+    let hide =document.getElementById("educations") as HTMLButtonElement;
+    if(hide.style.display === "none") {
+      hide.style.display = "block";
+  } else {
+    hide.style.display = "none";
+  }
+  }
+
+  function experiencebutton() {
+    let hide =document.getElementById("experiences") as HTMLButtonElement;
+    if(hide.style.display === "none") {
+      hide.style.display = "block";
+  } else {
+    hide.style.display = "none";
+  }
+  }
+
+  function skillbutton() {
+    let hide =document.getElementById("skills") as HTMLButtonElement;
+    if(hide.style.display === "none") {
+      hide.style.display = "block";
+  } else {
+    hide.style.display = "none";
+  }
+  }
+
+
+
+  
+
+
+  
