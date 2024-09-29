@@ -7,9 +7,10 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
        //type assertions
 
 // ******************* PERSONAL INFORMATION  ********************       
-       const profilePictureinput = document.getElementById(
-        `profilePicture`
-    ) as HTMLInputElement;
+const profilePictureinput = document.getElementById(
+  `profilePicture`
+) as HTMLInputElement;
+
 
 
        const nameElement = document.getElementById(`name`) as HTMLInputElement;
@@ -93,9 +94,6 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
            const profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : '';
 
      //** *********************************************************************************/
-        //    const username = usernameElement.value;
-        //    const uniquepath = `resume/${username.replace(/\s+/g,'_')}_cv.html`
-   
    
    
        //create resume
@@ -105,7 +103,8 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
     <div  id ="Resume">
 
 
-       <div id = "profilePicture > ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}</div> 
+     <div id = "profilePicture"> ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}</div> 
+
 
 
         <div id="personal information">
@@ -130,55 +129,38 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
        
             <h2>EDUCATION</h2>
             <ul style=" font-weight: bold;">
+            <li>Degree :${education1} </li> 
+            <li> Institute : ${education2} </li> 
+            <li>Grade : ${education3} </li>
+            </ul>
+         </div>
 
-            <li>${education1} </li> 
-            <li>${education2} </li> 
-            <li>${education3} </li> 
-         
-         </div>   
-            
-           
-
-
-              </ul>
-        </div>
-
-        <div id="experience">
+         <div id="experience">
             <h2>EXPERIENCE</h2>
             <ul style=" font-weight: bold;">
-                <li>${experience1}</li>
-                <li>${experience2}</li>
-                <li>${experience3}</li>
+                <li> Company Name :${experience1}</li>
+                <li>Position : ${experience2}</li>
+                <li>Duration : ${experience3}</li>
             </ul>
-
-             
         </div>
 
 
      
    
        <div id="skills">
-    <h2>SKILLS:</h2>
-    
-    <ul style=" font-weight: bold;">
-    <li>${skill1} </li> 
-    <li>${skill2} </li> 
-    <li>${skill3} </li> 
+          <h2>SKILLS:</h2>
+          <ul style=" font-weight: bold;">
+          <li>${skill1} </li> 
+          <li>${skill2} </li> 
+          <li>${skill3} </li>       
+          </ul>
+        </div>
+
+
+
+    </div>
    
-      
-    </ul>
-</div>
-
-
-
- </div>
-   
-
-
-
-
-       </div>
-    `
+ `
     //******************************************************************************* */
 
   
@@ -232,38 +214,3 @@ document.getElementById(`resumeform`)?.addEventListener(`submit`, function(event
 
    });
 
-// hide buttons
-
-  function educationbutton() {
-    let hide =document.getElementById("educations") as HTMLButtonElement;
-    if(hide.style.display === "none") {
-      hide.style.display = "block";
-  } else {
-    hide.style.display = "none";
-  }
-  }
-
-  function experiencebutton() {
-    let hide =document.getElementById("experiences") as HTMLButtonElement;
-    if(hide.style.display === "none") {
-      hide.style.display = "block";
-  } else {
-    hide.style.display = "none";
-  }
-  }
-
-  function skillbutton() {
-    let hide =document.getElementById("skills") as HTMLButtonElement;
-    if(hide.style.display === "none") {
-      hide.style.display = "block";
-  } else {
-    hide.style.display = "none";
-  }
-  }
-
-
-
-  
-
-
-  

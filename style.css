@@ -69,6 +69,18 @@ input{
     border-radius: 4px;
     box-sizing: border-box;
 }
+.add-skill{
+    width: calc(100% - 10px);
+    font-size: 3fr;
+    font-family: sans-serif;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+}
 button{
     display: block;
     margin: auto;

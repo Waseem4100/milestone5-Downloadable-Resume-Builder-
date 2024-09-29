@@ -48,8 +48,6 @@ var _a;
         const profilePictureFile = (_a = profilePictureinput.files) === null || _a === void 0 ? void 0 : _a[0];
         const profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : '';
         //** *********************************************************************************/
-        //    const username = usernameElement.value;
-        //    const uniquepath = `resume/${username.replace(/\s+/g,'_')}_cv.html`
         //create resume
         const resumeoutput = `
 
@@ -57,7 +55,8 @@ var _a;
     <div  id ="Resume">
 
 
-       <div id = "profilePicture > ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}</div> 
+     <div id = "profilePicture"> ${profilePictureURL ? `<img src="${profilePictureURL}" alt = "profliePicture" class ="profilePicture">` : ''}</div> 
+
 
 
         <div id="personal information">
@@ -82,55 +81,38 @@ var _a;
        
             <h2>EDUCATION</h2>
             <ul style=" font-weight: bold;">
+            <li>Degree :${education1} </li> 
+            <li> Institute : ${education2} </li> 
+            <li>Grade : ${education3} </li>
+            </ul>
+         </div>
 
-            <li>${education1} </li> 
-            <li>${education2} </li> 
-            <li>${education3} </li> 
-         
-         </div>   
-            
-           
-
-
-              </ul>
-        </div>
-
-        <div id="experience">
+         <div id="experience">
             <h2>EXPERIENCE</h2>
             <ul style=" font-weight: bold;">
-                <li>${experience1}</li>
-                <li>${experience2}</li>
-                <li>${experience3}</li>
+                <li> Company Name :${experience1}</li>
+                <li>Position : ${experience2}</li>
+                <li>Duration : ${experience3}</li>
             </ul>
-
-             
         </div>
 
 
      
    
        <div id="skills">
-    <h2>SKILLS:</h2>
-    
-    <ul style=" font-weight: bold;">
-    <li>${skill1} </li> 
-    <li>${skill2} </li> 
-    <li>${skill3} </li> 
+          <h2>SKILLS:</h2>
+          <ul style=" font-weight: bold;">
+          <li>${skill1} </li> 
+          <li>${skill2} </li> 
+          <li>${skill3} </li>       
+          </ul>
+        </div>
+
+
+
+    </div>
    
-      
-    </ul>
-</div>
-
-
-
- </div>
-   
-
-
-
-
-       </div>
-    `;
+ `;
         //******************************************************************************* */
         // resume output 
         const resumeoutputElement = document.getElementById(`resumeoutput`);
@@ -153,7 +135,7 @@ var _a;
             //add shareable link button
             const sharelinkbutton = document.createElement(`button`);
             sharelinkbutton.id = 'sharelinkbutton';
-            sharelinkbutton.textContent = " copy Shareable Link";
+            sharelinkbutton.textContent = " Copy Shareable Link";
             sharelinkbutton.classList.add('sharelinkbutton');
             sharelinkbutton.addEventListener('click', () => {
                 const shareableLink = window.location.href;
@@ -167,31 +149,3 @@ var _a;
         console.error("one or more  resume output elements are missing");
     }
 });
-// hide buttons
-function educationbutton() {
-    let hide = document.getElementById("educations");
-    if (hide.style.display === "none") {
-        hide.style.display = "block";
-    }
-    else {
-        hide.style.display = "none";
-    }
-}
-function experiencebutton() {
-    let hide = document.getElementById("experiences");
-    if (hide.style.display === "none") {
-        hide.style.display = "block";
-    }
-    else {
-        hide.style.display = "none";
-    }
-}
-function skillbutton() {
-    let hide = document.getElementById("skills");
-    if (hide.style.display === "none") {
-        hide.style.display = "block";
-    }
-    else {
-        hide.style.display = "none";
-    }
-}
